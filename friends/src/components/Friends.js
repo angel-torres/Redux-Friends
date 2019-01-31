@@ -9,7 +9,7 @@ class Friends extends Component {
     render() {
         return (
         <div>
-            {this.props.friends.map( friend => (<h1>{friend.name}</h1>))}
+            {this.props.friends.map( friend => (<h1 key={friend.id}>{friend.name}</h1>))}
         </div>
         )
     }
