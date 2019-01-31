@@ -19,19 +19,25 @@ class AddFriendForm extends Component {
 
     addFriend = e => {
         e.preventDefault();
-        this.props.addFriend(this.state)
+        this.props.addFriend(this.state);
+        this.setState({
+            name: '',
+            age: '',
+            email: '',
+        })
+        console.log(this.state)
     }
 
     render() {
         return (
-        <form>
+        <form onSubmit={this.addFriend}>
             <label>Name: </label>
-            <input name="name" onChange={this.handleChanges} value={this.state.Name} type="text" />
+            <input name="name" onChange={this.handleChanges} value={this.state.name} type="text" />
             <label>Age: </label>
-            <input name="age" onChange={this.handleChanges} value={this.state.textInput} type="text" />
+            <input name="age" onChange={this.handleChanges} value={this.state.age} type="text" />
             <label>Email: </label>
-            <input  name="email" onChange={this.handleChanges} value={this.state.textInput} type="text" />
-            <button onClick={this.addFriend}>Add Friend</button>
+            <input  name="email" onChange={this.handleChanges} value={this.state.email} type="text" />
+            <button>Add Friend</button>
         </form>
         )
     }

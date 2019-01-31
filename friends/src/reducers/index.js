@@ -14,23 +14,30 @@ const initialState = {
       }
 
 function reducer(state = initialState, action) {
-    console.log(action.payload)
     switch (action.type) {
         case FETCH_FRIENDS:
-            return {...state};
+            return {
+                ...state,
+                fetchingFriends: true
+            };
         case SUCCESS:
             return {
                 ...state,
-                friends: action.payload
+                friends: action.payload,
+                fetchingFriends: false,
+                friendsFetched: true
             }
         case ADDING_FRIEND:
             return {
-                ...state
+                ...state,
+                savingFriends: true,
             }
         case ADDED_FRIEND:
             return {
                 ...state,
-                friends: action.payload
+                friends: action.payload,
+                savingFriends: false,
+                friendsSaved: true,
             }
         default: 
             return state
