@@ -1,4 +1,9 @@
-import { FETCH_FRIENDS, SUCCESS, ADDING_FRIEND, ADDED_FRIEND } from '../actions';
+import { 
+    FETCH_FRIENDS,
+    SUCCESS, 
+    ADDING_FRIEND, 
+    ADDED_FRIEND,
+} from '../actions';
 
 const initialState = {
         fetchingFriends: false,

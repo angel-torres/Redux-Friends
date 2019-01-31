@@ -30,15 +30,17 @@ class AddFriendForm extends Component {
 
     render() {
         return (
-        <form onSubmit={this.addFriend}>
-            <label>Name: </label>
-            <input name="name" onChange={this.handleChanges} value={this.state.name} type="text" />
-            <label>Age: </label>
-            <input name="age" onChange={this.handleChanges} value={this.state.age} type="text" />
-            <label>Email: </label>
-            <input  name="email" onChange={this.handleChanges} value={this.state.email} type="text" />
-            <button>Add Friend</button>
-        </form>
+        <div>
+            <div className="jumbotron jumbotron-fluid">
+                <h1>ToDo App</h1>
+            </div>
+            <form style={{width:"600px", margin:"40px auto"}} onSubmit={this.addFriend} className="form-group">
+                <input style={{margin:"20px"}} placeholder="Name" className="form-control form-control-sm" name="name" onChange={this.handleChanges} value={this.state.name} type="text" />
+                <input style={{margin:"20px"}} placeholder="Age" className="form-control form-control-sm" name="age" onChange={this.handleChanges} value={this.state.age} type="text" />
+                <input style={{margin:"20px"}} placeholder="Email" className="form-control form-control-sm" name="email" onChange={this.handleChanges} value={this.state.email} type="text" />
+                <button className="btn btn-dark">Add Friend</button>
+            </form>
+        </div>
         )
     }
 }
