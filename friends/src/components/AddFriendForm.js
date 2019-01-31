@@ -31,8 +31,8 @@ class AddFriendForm extends Component {
     render() {
         return (
         <div>
-            <div className="jumbotron jumbotron-fluid">
-                <h1>ToDo App</h1>
+            <div className="jumbotron jumbotron-fluid" style={{backgroundColor:"black", color:"white"}}>
+                <h1>Friends</h1>
             </div>
             <form style={{width:"600px", margin:"40px auto"}} onSubmit={this.addFriend} className="form-group">
                 <input style={{margin:"20px"}} placeholder="Name" className="form-control form-control-sm" name="name" onChange={this.handleChanges} value={this.state.name} type="text" />
